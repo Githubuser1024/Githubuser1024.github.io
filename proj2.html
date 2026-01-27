@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Ordering Form</title>
+    <style>
+        body {
+            font-family: Times New Roman, serif;
+            margin: 20px;
+        }
+
+        .container {
+            width: 360px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+
+        textarea {
+            width: 95%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 3px;
+            text-align: left;
+        }
+
+        .count {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Pizza Ordering Form</h1>
+
+        <form>
+
+            <fieldset>
+                <legend><strong>Contact Information</strong></legend>
+
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Select Pizza Size</strong></legend>
+
+                <select name="size" required>
+                    <option value="">--Select Size--</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">XLarge</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Select Sauce</strong></legend>
+
+                <input type="radio" id="marinara" name="sauce" value="marinara" required>
+                <label for="marinara">Marinara</label><br>
+
+                <input type="radio" id="ranch" name="sauce" value="ranch">
+                <label for="ranch">Ranch</label><br>
+
+                <input type="radio" id="nosauce" name="sauce" value="none">
+                <label for="nosauce">No Sauce</label>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Select Toppings</strong></legend>
+
+                <input type="checkbox" id="pepperoni" name="toppings">
+                <label for="pepperoni">Pepperoni</label>
+
+                <input type="checkbox" id="sausage" name="toppings">
+                <label for="sausage">Sausage</label><br>
+
+                <input type="checkbox" id="mushroom" name="toppings">
+                <label for="mushroom">Mushroom</label>
+
+                <input type="checkbox" id="pineapple" name="toppings">
+                <label for="pineapple">Pineapple</label><br>
+
+                <input type="checkbox" id="peppers" name="toppings">
+                <label for="peppers">Peppers</label>
+
+                <input type="checkbox" id="onions" name="toppings">
+                <label for="onions">Onions</label>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Additional Instructions</strong></legend>
+
+                <textarea rows="3" placeholder="Add instructions"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <h3>List of My Favorite Games</h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Developer</th>
+                    <th colspan="2">Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Epic Games</td>
+                    <td colspan="2">Fortnite</td>
+                    <td>2017</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Fall Guys</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>Innersloth</td>
+                    <td colspan="2">Among Us</td>
+                    <td>2018</td>
+                </tr>
+                <tr>
+                    <td>Blizzard</td>
+                    <td colspan="2">Overwatch</td>
+                    <td>2016</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="count">
+            Count: 4
+        </div>
+
+    </div>
+
+</body>
+</html>
