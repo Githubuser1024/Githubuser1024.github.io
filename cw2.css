@@ -1,0 +1,138 @@
+/* Reset / base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #ffffff;
+}
+
+/* =========================
+   Jump Menu (Left Sidebar)
+========================= */
+#jumpMenu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 15%;
+    height: 100vh;
+    background-color: #d6b04a;
+    padding: 20px;
+}
+
+    #jumpMenu h2 {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    #jumpMenu a {
+        display: block;
+        margin: 10px 0;
+        color: blue;
+        text-decoration: underline;
+    }
+
+/* =========================
+   Main Content Area
+========================= */
+main {
+    margin-left: 15%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+/* =========================
+   Header (Fixed Top)
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 15%;
+    width: 85%;
+    background-color: #f03b2e;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+    header p {
+        font-size: 28px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    /* Header navigation buttons */
+    header nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    header button {
+        background-color: #001aff;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+/* =========================
+   Page Title
+========================= */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+/* =========================
+   Articles Layout
+========================= */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+article {
+    width: 300px;
+    line-height: 1.4;
+}
+
+    article h2 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    article p {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+/* =========================
+   Thank You Block
+========================= */
+#thanks {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #9fd0f7;
+    padding: 20px 30px;
+    font-size: 28px;
+    font-family: "Times New Roman", serif;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+    margin-top: 50px;
+    padding: 30px;
+}
