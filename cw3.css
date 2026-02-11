@@ -1,0 +1,159 @@
+/* ===============================
+   Page Layout
+================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e5e5e5;
+}
+
+/* Left Navigation */
+#menuItems {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: black;
+}
+
+    /* Navigation buttons */
+    #menuItems button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #0a33cc;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: 1px solid black;
+    }
+
+        /* Hover effect for nav buttons */
+        #menuItems button:hover {
+            background: #d4af37;
+            color: black;
+        }
+
+/* Jump menu hidden by default */
+#jumpMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background: #d4af37;
+}
+
+/* Show jump menu when hovering Recent Articles */
+#recentArticles:hover + #jumpMenu {
+    display: block;
+}
+
+/* Jump menu links */
+#jumpMenu li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: blue;
+}
+
+    /* Hover effect for jump menu links */
+    #jumpMenu li a:hover {
+        background: #0a33cc;
+        color: white;
+    }
+
+
+/* ===============================
+   Main Content Area
+================================= */
+
+main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #e63323;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+}
+
+/* Articles Layout */
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Articles */
+article {
+    background: white;
+    padding: 15px;
+    width: 22%;
+    min-width: 250px;
+    color: #999; /* Light text initially */
+    max-height: 220px; /* Collapsed size */
+    overflow: hidden;
+    transition: all 2s; /* 2 second transition */
+}
+
+    /* Article hover effect */
+    article:hover {
+        color: #000; /* Darker text */
+        max-height: 600px; /* Expands */
+    }
+
+    /* First letter styling (NOT affecting Read More) */
+    article p:first-of-type::first-letter {
+        font-family: "Times New Roman", serif;
+        font-size: 36px;
+    }
+
+/* ===============================
+   Read More Links
+================================= */
+
+/* Add arrow image to Google links */
+a[href*="google.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    background-image: url("arrowarrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ===============================
+   Thank You Button
+================================= */
+
+#thanks {
+    margin-top: 20px;
+    text-align: right;
+}
+
+    #thanks a {
+        background: #a9cce3;
+        padding: 8px 12px;
+        text-decoration: none;
+    }
+
+/* ===============================
+   Footer
+================================= */
+
+footer {
+    margin-top: 40px;
+}
