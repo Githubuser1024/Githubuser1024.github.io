@@ -8,7 +8,10 @@ body {
     background: #e5e5e5;
 }
 
-/* Left Navigation */
+/* ===============================
+   Left Navigation
+================================= */
+
 #menuItems {
     position: fixed;
     left: 0;
@@ -18,25 +21,28 @@ body {
     background: black;
 }
 
-    /* Navigation buttons */
-    #menuItems button {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        background: #0a33cc;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        border-bottom: 1px solid black;
-    }
+/* Navigation Buttons */
+#menuItems button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #0a33cc;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
 
-        /* Hover effect for nav buttons */
-        #menuItems button:hover {
-            background: #d4af37;
-            color: black;
-        }
+/* Hover effect for nav buttons */
+#menuItems button:hover {
+    background: #d4af37;
+    color: black;
+}
 
-/* Jump menu hidden by default */
+/* ===============================
+   Jump Menu (Dropdown)
+================================= */
+
 #jumpMenu {
     list-style: none;
     padding: 0;
@@ -45,8 +51,9 @@ body {
     background: #d4af37;
 }
 
-/* Show jump menu when hovering Recent Articles */
-#recentArticles:hover + #jumpMenu {
+/* Show menu when hovering button OR menu */
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
     display: block;
 }
 
@@ -58,12 +65,11 @@ body {
     color: blue;
 }
 
-    /* Hover effect for jump menu links */
-    #jumpMenu li a:hover {
-        background: #0a33cc;
-        color: white;
-    }
-
+/* Hover effect for jump menu links */
+#jumpMenu li a:hover {
+    background: #0a33cc;
+    color: white;
+}
 
 /* ===============================
    Main Content Area
@@ -81,6 +87,7 @@ header {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
+    color: black;
 }
 
 /* Page Title */
@@ -101,29 +108,31 @@ article {
     padding: 15px;
     width: 22%;
     min-width: 250px;
-    color: #999; /* Light text initially */
-    max-height: 220px; /* Collapsed size */
+
+    color: #999;                 /* Light text initially */
+    max-height: 220px;           /* Collapsed size */
     overflow: hidden;
-    transition: all 2s; /* 2 second transition */
+
+    transition: all 2s;          /* Smooth 2-second transition */
 }
 
-    /* Article hover effect */
-    article:hover {
-        color: #000; /* Darker text */
-        max-height: 600px; /* Expands */
-    }
+/* Hover effect: darken + expand */
+article:hover {
+    color: black;
+    max-height: 800px;
+}
 
-    /* First letter styling (NOT affecting Read More) */
-    article p:first-of-type::first-letter {
-        font-family: "Times New Roman", serif;
-        font-size: 36px;
-    }
+/* First letter styling (only main article paragraph) */
+article p:first-of-type::first-letter {
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+}
 
 /* ===============================
-   Read More Links
+   Read More Arrow Icon
 ================================= */
 
-/* Add arrow image to Google links */
+/* Add arrow image to all Google links */
 a[href*="google.com"]::after {
     content: "";
     display: inline-block;
@@ -136,7 +145,7 @@ a[href*="google.com"]::after {
 }
 
 /* ===============================
-   Thank You Button
+   Thank You Section
 ================================= */
 
 #thanks {
@@ -144,11 +153,11 @@ a[href*="google.com"]::after {
     text-align: right;
 }
 
-    #thanks a {
-        background: #a9cce3;
-        padding: 8px 12px;
-        text-decoration: none;
-    }
+#thanks a {
+    background: #a9cce3;
+    padding: 8px 12px;
+    text-decoration: none;
+}
 
 /* ===============================
    Footer
@@ -157,4 +166,3 @@ a[href*="google.com"]::after {
 footer {
     margin-top: 40px;
 }
-
