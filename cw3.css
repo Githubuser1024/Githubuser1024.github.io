@@ -139,7 +139,7 @@ a[href*="google.com"]::after {
     width: 16px;
     height: 16px;
     margin-left: 6px;
-    background-image: url("arrowarrow.png");
+    background-image: url("arrow.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -166,3 +166,4 @@ a[href*="google.com"]::after {
 footer {
     margin-top: 40px;
 }
+
